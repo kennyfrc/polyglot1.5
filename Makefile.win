@@ -1,0 +1,122 @@
+# Project: poly
+# Makefile created by Dev-C++ 5.2.0.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = adapter.o attack.o board.o book.o book_make.o book_merge.o colour.o engine.o epd.o fen.o game.o hash.o io.o line.o list.o main.o move.o move_do.o move_gen.o move_legal.o option.o parse.o pgn.o piece.o posix.o random.o san.o search.o square.o uci.o uci_options.o util.o $(RES)
+LINKOBJ  = adapter.o attack.o board.o book.o book_make.o book_merge.o colour.o engine.o epd.o fen.o game.o hash.o io.o line.o list.o main.o move.o move_do.o move_gen.o move_legal.o option.o parse.o pgn.o piece.o posix.o random.o san.o search.o square.o uci.o uci_options.o util.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc  -m32 
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" 
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" 
+BIN      = poly.exe
+CXXFLAGS = $(CXXINCS)   -m32
+CFLAGS   = $(INCS)   -m32
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before poly.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "poly.exe" $(LIBS)
+
+adapter.o: adapter.cpp
+	$(CPP) -c adapter.cpp -o adapter.o $(CXXFLAGS)
+
+attack.o: attack.cpp
+	$(CPP) -c attack.cpp -o attack.o $(CXXFLAGS)
+
+board.o: board.cpp
+	$(CPP) -c board.cpp -o board.o $(CXXFLAGS)
+
+book.o: book.cpp
+	$(CPP) -c book.cpp -o book.o $(CXXFLAGS)
+
+book_make.o: book_make.cpp
+	$(CPP) -c book_make.cpp -o book_make.o $(CXXFLAGS)
+
+book_merge.o: book_merge.cpp
+	$(CPP) -c book_merge.cpp -o book_merge.o $(CXXFLAGS)
+
+colour.o: colour.cpp
+	$(CPP) -c colour.cpp -o colour.o $(CXXFLAGS)
+
+engine.o: engine.cpp
+	$(CPP) -c engine.cpp -o engine.o $(CXXFLAGS)
+
+epd.o: epd.cpp
+	$(CPP) -c epd.cpp -o epd.o $(CXXFLAGS)
+
+fen.o: fen.cpp
+	$(CPP) -c fen.cpp -o fen.o $(CXXFLAGS)
+
+game.o: game.cpp
+	$(CPP) -c game.cpp -o game.o $(CXXFLAGS)
+
+hash.o: hash.cpp
+	$(CPP) -c hash.cpp -o hash.o $(CXXFLAGS)
+
+io.o: io.cpp
+	$(CPP) -c io.cpp -o io.o $(CXXFLAGS)
+
+line.o: line.cpp
+	$(CPP) -c line.cpp -o line.o $(CXXFLAGS)
+
+list.o: list.cpp
+	$(CPP) -c list.cpp -o list.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+move.o: move.cpp
+	$(CPP) -c move.cpp -o move.o $(CXXFLAGS)
+
+move_do.o: move_do.cpp
+	$(CPP) -c move_do.cpp -o move_do.o $(CXXFLAGS)
+
+move_gen.o: move_gen.cpp
+	$(CPP) -c move_gen.cpp -o move_gen.o $(CXXFLAGS)
+
+move_legal.o: move_legal.cpp
+	$(CPP) -c move_legal.cpp -o move_legal.o $(CXXFLAGS)
+
+option.o: option.cpp
+	$(CPP) -c option.cpp -o option.o $(CXXFLAGS)
+
+parse.o: parse.cpp
+	$(CPP) -c parse.cpp -o parse.o $(CXXFLAGS)
+
+pgn.o: pgn.cpp
+	$(CPP) -c pgn.cpp -o pgn.o $(CXXFLAGS)
+
+piece.o: piece.cpp
+	$(CPP) -c piece.cpp -o piece.o $(CXXFLAGS)
+
+posix.o: posix.cpp
+	$(CPP) -c posix.cpp -o posix.o $(CXXFLAGS)
+
+random.o: random.cpp
+	$(CPP) -c random.cpp -o random.o $(CXXFLAGS)
+
+san.o: san.cpp
+	$(CPP) -c san.cpp -o san.o $(CXXFLAGS)
+
+search.o: search.cpp
+	$(CPP) -c search.cpp -o search.o $(CXXFLAGS)
+
+square.o: square.cpp
+	$(CPP) -c square.cpp -o square.o $(CXXFLAGS)
+
+uci.o: uci.cpp
+	$(CPP) -c uci.cpp -o uci.o $(CXXFLAGS)
+
+uci_options.o: uci_options.cpp
+	$(CPP) -c uci_options.cpp -o uci_options.o $(CXXFLAGS)
+
+util.o: util.cpp
+	$(CPP) -c util.cpp -o util.o $(CXXFLAGS)
