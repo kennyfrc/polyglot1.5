@@ -8,11 +8,11 @@ microsoft compilers (especially vs2003,vs2002 and vc++ 6.0)
 also Eric implemented EngineNice and ScoreWhite
 Best
 Fonzy
+
 www.geenvis.net
-================1.w28/1.w29============================================================
+===============1.w28/1.w29============
 racing bug fix,causing time losses for alichess on ponder miss
 fixed: polyglot was parsing info strings
-=================================================================================
 ===============1.4w27=================
 As winboard sends the info strings to fics/ics as well and this can cause unwanted side-effects,polyglot does not send them to winboard unless InfoStrings is set true.
 new MultiPVall bool.If set true will also show the multipv lines from previous depths.
@@ -32,11 +32,12 @@ If Resign is used and the number of ResignMoves is reached,
 untested: ics: a drawing move from the uci engine will be preceded with "offer draw"
 ===============1.4w24=================
 fixed another racing condition.
-fix compiler complaint UCHAR_MAX*
-makefile.gcc EXE renamed from polyglot.exe to polyglot*
-included generic makefile*
-*Heinz van Saanen
-===============1.4w23=================
+fix compiler complaint UCHAR_MAX
+makefile.gcc EXE renamed from polyglot.exe to polyglot
+included generic makefile
+Heinz van Saanen
+
+===============1.4w23================
 fix: Create books from pgn files that have FEN tags in the games,this should work now. 
 ===============1.4w22=================
 Allow ; in strings such as EGTB path names as a seperator.
@@ -45,20 +46,14 @@ On Windows: Not much variety in book lines: forgot to seed rand() in the thread 
 Also replaced the seeding with a better one.
 ===============1.4w20=================
 bookmoves with zero weight are allowed,these moves always are ignored.
-
 ===============1.4w19=================
 Jim Ablett fixes for non-windows compilations
-
 ===============1.4w18=================
 resign in ponder games was broken,fixed
-
 ===============1.4w17=================
 small fix,pg was sending game results before the last move was send to xboard.
-
 ===============1.4w16=================
 Found and fixed a couple of race conditions while runing polyglot on a single core computer.
-
-
 ===============1.4w15=================
 Removed polling.
 The windows version now uses a seperate thread and normal I/O (blocking) calls.
@@ -106,7 +101,7 @@ added int EngineNice option
            0: NORMAL
        1..14: LOWER
       15..19: IDLE
-    ** NEGATIVE VALUES WILL SCREW THINGS UP **
+     NEGATIVE VALUES WILL SCREW THINGS UP 
     This is no magic bullet for more CPU power.  The purpose is to REDUCE engine priority so
     that other processes on your computer will not be sluggish.
 
@@ -151,7 +146,7 @@ some minor bugs fixed
 
 checks if child did really quit.
 
-*********************************************************
+*************************************************
 === PolyGlot 1.3W ReadMe ===
 
 PolyGlot - a UCI-to-WinBoard Adapter for UCI Chess Engines
