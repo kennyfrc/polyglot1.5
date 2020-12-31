@@ -1,4 +1,5 @@
-*.o
-*.so
-*.bin
-*.pgn
+src/*.o
+src/*.so
+src/*.bin
+src/*.pgn
+.DS_Store
